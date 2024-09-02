@@ -1,7 +1,7 @@
 import PageLayout from "../PageLayout";
 
 const Introduction = () => {
-    return <PageLayout>
+    return <PageLayout style={{backgroundColor: '#0093E9', backgroundImage: 'linear-gradient(20deg, #0093E9 0%, #80D0C7 100%)'}}>
         <div className="w-full h-full grid grid-cols-3">
             <GridItem title='정보' content={<>
                 이선재<br/>1994.11.18
@@ -16,12 +16,12 @@ const Introduction = () => {
     </PageLayout>
 };
 
-interface GridITemProps {
+interface GridItemProps {
     title: string;
     content: React.ReactElement;
 };
 
-const GridItem: React.FC<GridITemProps>= ({ title, content }) => {
+const GridItem: React.FC<GridItemProps>= ({ title, content }) => {
     return <div className="flex items-center justify-center text-center">
         <div className="card p-16 flex flex-col items-center justify-center h-1/2 rounded-xl">
             <div className="text-6xl font-black	 border-b-[6px] border-black pb-1">{title}</div>
